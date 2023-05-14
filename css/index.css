@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: #36768c;
+  font-family: 'roboto', sans-serif;
+  display: flex;  /*para colocarlos en fila*/
+  justify-content: center;  /*lo coloca en fila al centro de la pantalla*/
+  align-items: center;  /*posiciona la imagen al centro de la pantalla*/
+}
+
+.card {
+  width: 320px;
+  height: 500px;
+  border-radius: 20px;  /*para redondear las esquinas*/
+  overflow: hidden;  /*para ocultar el texto contenida en la información*/
+  border: 8px solid #fff;  /*colocamos un borde a la imagen de 8px de color blanco*/
+  position: relative;
+}
+
+.card-img {
+  /*para darle formato a la imagen y encaje en el box ya que la imagen es muy grande*/
+  width: 100%;
+  height: 100%;
+  object-fit: cover;  /*hacemos que la imagen ocupe todo el contenedor*/
+  border-radius: 15px;  /*redondeamos las esquinas de la imagen*/
+}
+
+.card-body {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: -100%;  /*mueve el contenido del cuerpo a la derecha 100%*/
+  position: absolute;
+  background: #1f3d4738;  /*colocamos un color casi transparente*/
+  backdrop-filter: blur(5px);  /*colocamos el efecto borroso de 5px*/
+  border-radius: 15px;  /*redondeamos las esquinas*/
+  color: #fff;
+  padding: 30px;  /*empuja el texto hacia adentro 30px*/
+  letter-spacing: 1px;  /*le damos una separación entre letras de 1px*/
+  display: flex;  /*para colocar en fila todo lo que esta dentro del body*/
+  flex-direction: column;  /*coloca todo lo que esta dentro del body en una columna*/
+  justify-content: center;  /*alínea todos los elementos del body al centro de la pantalla*/
+  transition: 2s;  /*para hacer el efecto de aparecer con una transición de 2s*/
+}
+
+.card:hover .card-body {
+  right: 0;  /*cuando pasa el cursor por la tarjeta mueve el contenido a la derecha*/
+}
+
+.card-title {
+  text-transform: uppercase;  /*transformamos el texto a mayúsculas*/
+  font-size: 50px;
+  font-weight: 500;  /*para definir el ancho de las letras del texto*/
+}
+
+.card-sub-title {
+  text-transform: capitalize;  /*para escribir en mayúsculas el primer caracter de cada palabra*/
+  font-size: 14px;
+  font-weight: 300;  /*para definir el ancho de las letras del texto*/
+}
+
+.card-info {
+  font-size: 16px;  /*aplicamos tamaño a las letras del texto*/
+  line-height: 25px;  /*separación entre líneas de texto*/
+  margin: 40px 0;
+  font-weight: 400;  /*aplicamos grosor a la letras del texto*/
+}
+
+.card-btn {
+  color: #1f3d47;  /*para el color del texto del botón*/
+  background: #8fabba;  /*para el color del fondo del botón*/
+  padding: 10px 20px;
+  width: 120px;  /*coloca el ancho del botón a un tamaño de 120px*/
+  border-radius: 5px;  /*para redondear las esquinas del botón*/
+  text-transform: capitalize;  /*colocamos en mayúsculas las primeras letras de cada palabra*/
+  border: none;  /*para quitarle el borde al botón*/
+  outline: none;  /*para quitarle las líneas al botón*/
+  font-weight: 500;  /*para el ancho de las letras del botón*/
+  cursor: pointer;  /*para cuando pasen el cursor por el botón, el cursor cambie a una manito*/
+}
